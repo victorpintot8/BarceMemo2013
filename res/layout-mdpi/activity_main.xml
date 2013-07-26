@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:background="#fffa00">
+
+    <TextView
+        android:id="@+id/TVmain"
+        android:layout_width="match_parent"
+        android:layout_height="74dp"
+        android:gravity="center"
+        android:text="@string/title_main"
+        android:textSize="25sp" android:textStyle="bold|italic" android:textColor="#ff0000" android:focusable="false"
+        android:textIsSelectable="false" android:typeface="serif" android:autoText="false"
+            />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="fill_parent"
+        android:layout_height="155dp"
+        android:src="@drawable/barcelonalogo"/>
+
+    <Button
+        android:id="@+id/BTstart"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:onClick="start"
+        android:text="@string/start_game" android:textStyle="bold" android:layout_marginRight="60dp"
+        android:layout_marginLeft="60dp"
+        android:textSize="25sp"
+        android:textColor="#ffff00"
+        android:background="#282828"
+        android:layout_marginTop="8dp"
+            />
+
+    <Button
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:text="@string/puntajes"
+            android:id="@+id/BTpuntaje"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="60dp"
+            android:textStyle="bold"
+            android:onClick="puntaje"
+            android:textColor="#ffff00"
+            android:background="#282828"
+            android:layout_marginTop="8dp"
+            />
+
+    <Button
+        android:id="@+id/BTpreferences"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:text="@string/preferences" android:textStyle="bold" android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
+        android:onClick="Epreferencias"
+        android:textColor="#ffff00"
+        android:background="#282828"
+        android:layout_marginTop="8dp"
+            />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        android:text="Created by Víctor Pinto" />
+
+</LinearLayout>

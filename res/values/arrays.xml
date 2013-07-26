@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="canciones">
+        <item>Un solo ídolo</item>
+        <item>Si, sí señores</item>
+        <item>Amarillo es mi color</item>
+    </string-array>
+
+</resources>

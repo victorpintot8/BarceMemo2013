@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_barcelonascmemorygame" default="compile.module.barcelonascmemorygame">
+  <dirname property="module.barcelonascmemorygame.basedir" file="${ant.file.module_barcelonascmemorygame}"/>
+  
+  <property name="module.jdk.home.barcelonascmemorygame" value="${jdk.home.android_4.2.2}"/>
+  <property name="module.jdk.bin.barcelonascmemorygame" value="${jdk.bin.android_4.2.2}"/>
+  <property name="module.jdk.classpath.barcelonascmemorygame" value="jdk.classpath.android_4.2.2"/>
+  
+  <property name="compiler.args.barcelonascmemorygame" value="${compiler.args}"/>
+  
+  <property name="barcelonascmemorygame.output.dir" value="${module.barcelonascmemorygame.basedir}/out/production/BarcelonaSCMemoryGame"/>
+  <property name="barcelonascmemorygame.testoutput.dir" value="${module.barcelonascmemorygame.basedir}/out/test/BarcelonaSCMemoryGame"/>
+  
+  <path id="barcelonascmemorygame.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="barcelonascmemorygame.module.production.classpath">
+    <path refid="${module.jdk.classpath.barcelonascmemorygame}"/>
+    <path refid="library.sqljdbc4.classpath"/>
+  </path>
+  
+  <path id="barcelonascmemorygame.runtime.production.module.classpath">
+    <pathelement location="${barcelonascmemorygame.output.dir}"/>
+    <path refid="library.sqljdbc4.classpath"/>
+  </path>
+  
+  <path id="barcelonascmemorygame.module.classpath">
+    <path refid="${module.jdk.classpath.barcelonascmemorygame}"/>
+    <pathelement location="${barcelonascmemorygame.output.dir}"/>
+    <path refid="library.sqljdbc4.classpath"/>
+  </path>
+  
+  <path id="barcelonascmemorygame.runtime.module.classpath">
+    <pathelement location="${barcelonascmemorygame.testoutput.dir}"/>
+    <pathelement location="${barcelonascmemorygame.output.dir}"/>
+    <path refid="library.sqljdbc4.classpath"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.barcelonascmemorygame">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.barcelonascmemorygame">
+    <patternset refid="excluded.from.module.barcelonascmemorygame"/>
+  </patternset>
+  
+  <path id="barcelonascmemorygame.module.sourcepath">
+    <dirset dir="${module.barcelonascmemorygame.basedir}">
+      <include name="gen"/>
+      <include name="src"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.barcelonascmemorygame" depends="compile.module.barcelonascmemorygame.production,compile.module.barcelonascmemorygame.tests" description="Compile module BarcelonaSCMemoryGame"/>
+  
+  <target name="compile.module.barcelonascmemorygame.production" depends="register.custom.compilers" description="Compile module BarcelonaSCMemoryGame; production classes">
+    <mkdir dir="${barcelonascmemorygame.output.dir}"/>
+    <javac2 destdir="${barcelonascmemorygame.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.barcelonascmemorygame}/javac">
+      <compilerarg line="${compiler.args.barcelonascmemorygame}"/>
+      <bootclasspath refid="barcelonascmemorygame.module.bootclasspath"/>
+      <classpath refid="barcelonascmemorygame.module.production.classpath"/>
+      <src refid="barcelonascmemorygame.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.barcelonascmemorygame"/>
+    </javac2>
+    
+    <copy todir="${barcelonascmemorygame.output.dir}">
+      <fileset dir="${module.barcelonascmemorygame.basedir}/gen">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+      <fileset dir="${module.barcelonascmemorygame.basedir}/src">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.barcelonascmemorygame.tests" depends="register.custom.compilers,compile.module.barcelonascmemorygame.production" description="compile module BarcelonaSCMemoryGame; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.barcelonascmemorygame" description="cleanup module">
+    <delete dir="${barcelonascmemorygame.output.dir}"/>
+    <delete dir="${barcelonascmemorygame.testoutput.dir}"/>
+  </target>
+</project>

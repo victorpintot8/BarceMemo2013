@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <!--Main Activity-->
+    <string name="title_main">Memorama Barcelona SC 2013 </string>
+    <string name="start_game">Jugar!</string>
+    <string name="preferences">Preferencias</string>
+    <string name="creado_por">App creada por Víctor Pinto</string>
+    <string name="app_name">BarceMemo 2013</string>
+    <string name="selecciona_nivel">Nivel de dificultad</string>
+
+    <!--Nivel Fácil-->
+    <string name="title_activity_challenge_mode">Nivel fácil</string>
+    <string name="puntaje">Puntaje</string>
+    <string name="tiempo">Tiempo</string>
+    <string name="turnos">Turnos</string>
+    <string name="nivel_facil">Fácil</string>
+    <string name="reset_button">Reiniciar</string>
+
+    <!--Nivel medio-->
+    <string name="nivel_medio">Medio</string>
+    <string name="title_activity_challenge_mode_medio">Nivel medio</string>
+
+    <!--Nivel dificil-->
+    <string name="nivel_dificil">Difícil</string>
+    <string name="title_activity_challenge_mode_dificil">Nivel difícil</string>
+
+    <!--Preferencias-->
+    <string name="title_activity_preferences">Preferencias</string>
+    <string name="musica">Música</string>
+    <string name="action_settings">Acerca de</string>
+    <string name="acercade">Acerca de</string>
+    <string name="cancion">Canción por defecto</string>
+    <string name="acercade_mensaje">Aplicación BscMemo 2013 desarrollada por Víctor Pinto sin fines de lucro, solo por amor a Barcelona SC.
+Contacto: viterete8@gmail.com</string>
+
+
+   <!--Mejores Puntajes-->
+    <string name="puntajes">Mejores Puntajes</string>
+    <string name="pnombre">Nombre</string>
+    <string name="ppuntaje">Puntaje</string>
+    <string name="pposicion">No.</string>
+    <string name="botonyo">Yo</string>
+    <string name="botontodos">Todos</string>
+
+</resources>

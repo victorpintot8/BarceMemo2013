@@ -1,0 +1,86 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ChallengeModeDificil"
+    android:background="#ffff00">
+
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/puntaje"
+                android:id="@+id/TVCMpuntaje" android:layout_weight="0.33" android:textSize="20sp"
+                android:gravity="center"
+                android:textStyle="bold|italic"
+                android:textColor="#ff0000"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/turnos"
+                android:id="@+id/TVCMturnos" android:layout_weight="0.33" android:textSize="20sp"
+                android:gravity="center"
+                android:textStyle="bold|italic"
+                android:textColor="#ff0000"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tiempo"
+                android:id="@+id/TVCMtiempo" android:textSize="20sp" android:layout_weight="0.33"
+                android:gravity="center"
+                android:textStyle="bold|italic"
+                android:textColor="#ff0000"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:id="@+id/TVCMpoints" android:layout_weight="0.33" android:textSize="18sp"
+                android:gravity="center"/>
+        <TextView
+            android:id="@+id/TVCMturns"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.33" android:textSize="20sp" android:gravity="center" android:text="0"/>
+        <TextView
+            android:id="@+id/TVCMtimer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.33"
+            android:gravity="center"
+            android:textSize="18sp"/>
+    </LinearLayout>
+    
+    <Button
+        android:id="@+id/BTCMreset"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:gravity="center_vertical|center_horizontal"
+        android:onClick="ResetGame"
+        android:text="@string/reset_button"
+        android:layout_gravity="center_horizontal"
+        android:textColor="#ff0000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:background="#282828"/>
+
+    <GridView
+        android:id="@+id/GV1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:numColumns="3"
+        android:layout_marginLeft="14dp">
+
+    </GridView>
+
+</LinearLayout>
