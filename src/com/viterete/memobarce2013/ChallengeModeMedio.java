@@ -217,56 +217,72 @@ public class ChallengeModeMedio extends Activity {
                 TVTbonoturnos.setText(String.valueOf(turns)+" + 0");
                 break;
         }
-        if(seconds<12 && minutes==0){
-            TVTtiempo.setText("0"+String.valueOf(seconds)+" s");
-            bonotiempo=6000;
-            TVTbonotiempo.setText(String.valueOf(bonotiempo));
+        if(minutes==0){
+            if(seconds<12 && minutes==0){
+                TVTtiempo.setText("0"+String.valueOf(seconds)+" s");
+                bonotiempo=6000;
+                TVTbonotiempo.setText(String.valueOf(bonotiempo));
+            }
+            else if(seconds<14 && minutes==0){
+                TVTtiempo.setText(""+String.valueOf(seconds)+" s");
+                bonotiempo=5000;
+                TVTbonotiempo.setText(String.valueOf(bonotiempo));
+            }
+            else if(seconds<16 && minutes==0){
+                TVTtiempo.setText(""+String.valueOf(seconds)+" s");
+                bonotiempo=3000;
+                TVTbonotiempo.setText(String.valueOf(bonotiempo));
+            }
+            else if(seconds<18 && minutes==0){
+                TVTtiempo.setText("" + String.valueOf(seconds) + " s");
+                bonotiempo=2000;
+                TVTbonotiempo.setText(String.valueOf(bonotiempo));
+            }
+            else if(seconds<20 && minutes==0){
+                TVTtiempo.setText(""+String.valueOf(seconds)+" s");
+                bonotiempo=1500;
+                TVTbonotiempo.setText(String.valueOf(bonotiempo));
+            }
+            else if(seconds<22 && minutes==0){
+                TVTtiempo.setText(""+String.valueOf(seconds)+" s");
+                bonotiempo=1000;
+                TVTbonotiempo.setText(String.valueOf(bonotiempo));
+            }
+            else if(seconds<25 && minutes==0){
+                TVTtiempo.setText(""+String.valueOf(seconds)+" s");
+                bonotiempo=800;
+                TVTbonotiempo.setText(String.valueOf(bonotiempo));
+            }
+            else if(seconds<28 && minutes==0){
+                TVTtiempo.setText(""+String.valueOf(seconds)+" s");
+                bonotiempo=700;
+                TVTbonotiempo.setText(String.valueOf(bonotiempo));
+            }
+            else if(seconds<30 && minutes==0){
+                TVTtiempo.setText(""+String.valueOf(seconds)+" s");
+                bonotiempo=500;
+                TVTbonotiempo.setText(String.valueOf(bonotiempo));
+            }
+            else{
+                TVTtiempo.setText(""+String.valueOf(seconds)+" s");
+                bonotiempo=250;
+                TVTbonotiempo.setText(String.valueOf(bonotiempo));
+            }
         }
-        else if(seconds<14 && minutes==0){
-            TVTtiempo.setText(""+String.valueOf(seconds)+" s");
-            bonotiempo=5000;
-            TVTbonotiempo.setText(String.valueOf(bonotiempo));
+        else{
+            if(seconds<10 && minutes>0){
+                TVTtiempo.setText(String.valueOf(minutes)+"0"+String.valueOf(seconds)+" s");
+                bonotiempo=100;
+                TVTbonotiempo.setText(String.valueOf(bonotiempo));
+            }
+            else{
+                TVTtiempo.setText(String.valueOf(minutes)+String.valueOf(seconds)+" s");
+                bonotiempo=50;
+                TVTbonotiempo.setText(String.valueOf(bonotiempo));
+            }
         }
-        else if(seconds<16 && minutes==0){
-            TVTtiempo.setText(""+String.valueOf(seconds)+" s");
-            bonotiempo=3000;
-            TVTbonotiempo.setText(String.valueOf(bonotiempo));
-        }
-        else if(seconds<18 && minutes==0){
-            TVTtiempo.setText("" + String.valueOf(seconds) + " s");
-            bonotiempo=2000;
-            TVTbonotiempo.setText(String.valueOf(bonotiempo));
-        }
-        else if(seconds<20 && minutes==0){
-            TVTtiempo.setText(""+String.valueOf(seconds)+" s");
-            bonotiempo=1500;
-            TVTbonotiempo.setText(String.valueOf(bonotiempo));
-        }
-        else if(seconds<22 && minutes==0){
-            TVTtiempo.setText(""+String.valueOf(seconds)+" s");
-            bonotiempo=1000;
-            TVTbonotiempo.setText(String.valueOf(bonotiempo));
-        }
-        else if(seconds<25 && minutes==0){
-            TVTtiempo.setText(""+String.valueOf(seconds)+" s");
-            bonotiempo=800;
-            TVTbonotiempo.setText(String.valueOf(bonotiempo));
-        }
-        else if(seconds<28 && minutes==0){
-            TVTtiempo.setText(""+String.valueOf(seconds)+" s");
-            bonotiempo=700;
-            TVTbonotiempo.setText(String.valueOf(bonotiempo));
-        }
-        else if(seconds<30 && minutes==0){
-            TVTtiempo.setText(""+String.valueOf(seconds)+" s");
-            bonotiempo=500;
-            TVTbonotiempo.setText(String.valueOf(bonotiempo));
-        }
-        if(seconds<10 && minutes>0){
-            TVTtiempo.setText(String.valueOf(minutes)+"0"+String.valueOf(seconds)+" s");
-            bonotiempo=100;
-            TVTbonotiempo.setText(String.valueOf(bonotiempo));
-        }
+
+
         puntajef=bonotiempo+bonoturnos+puntaje;
         TVTpuntajetotal.setText(String.valueOf(puntajef));
         insertarpuntaje(puntajef);
