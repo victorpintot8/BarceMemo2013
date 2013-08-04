@@ -34,7 +34,7 @@ public class ChallengeModeDificil extends Activity {
     private View v1;
     private Card firstCard,secondCard;
     private static Timer myTimer,myTimer2;
-    private int turns,cont=0,contwinner=9,v1pos,puntaje=0,puntajef=0,cuentaregresiva=0,tiempoplayer=0,cancion=0;
+    private int turns,cont=0,contwinner=0,v1pos,puntaje=0,puntajef=0,cuentaregresiva=0,tiempoplayer=0,cancion=0;
     private Handler mHandler = new Handler();
     private TextView TVturns,TVpuntaje,timer;
     private List<Integer> images=new ArrayList<Integer>();
