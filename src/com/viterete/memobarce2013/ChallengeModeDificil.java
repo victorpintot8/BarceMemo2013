@@ -135,6 +135,7 @@ public class ChallengeModeDificil extends Activity {
                         }
                         else{
                             turns++;
+                            TVturns.setText(String.valueOf(turns));
                             final ImageView ImageV1=(ImageView) v1;
                             parent.setEnabled(false);
                             mHandler.postDelayed(new Runnable(){
@@ -143,8 +144,6 @@ public class ChallengeModeDificil extends Activity {
                                     ImageV.setImageResource(R.drawable.bsc14);
                                     ImageV1.setImageResource(R.drawable.bsc14);
                                 }}, 300);
-
-                            TVturns.setText(String.valueOf(turns));
                         }
                         cont=0;
                     }
