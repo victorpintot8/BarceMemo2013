@@ -128,7 +128,7 @@ public class ChallengeModeDificil extends Activity {
                                     parent.setEnabled(true);
                                     v.setVisibility(View.GONE);
                                     v1.setVisibility(View.GONE);
-                                }}, 250);
+                                }}, 300);
                             contwinner++;
                             TVpuntaje.setText(String.valueOf(puntaje=puntaje+500));
                             CheckWin(contwinner);
