@@ -111,9 +111,8 @@ public class ChallengeModeFacil extends Activity {
 						else
 						{
 							ImageV.setImageResource(images.get(position));						
-							secondCard=new Card(images.get(position));						
-							boolean check=compare(firstCard.getId(),secondCard.getId());
-							if(check){
+							secondCard=new Card(images.get(position));
+							if(compare(firstCard.getId(),secondCard.getId())){
 								turns++;
 								TVturns.setText(String.valueOf(turns));
 								parent.setEnabled(false);
@@ -122,7 +121,7 @@ public class ChallengeModeFacil extends Activity {
 							        	parent.setEnabled(true);
 							        			v.setVisibility(View.GONE);
 												v1.setVisibility(View.GONE);							        									        							  						        	            
-							      }}, 800);
+							      }}, 900);
 								contwinner++;
                                 TVpuntaje.setText(String.valueOf(puntaje=puntaje+500));
 								CheckWin(contwinner);

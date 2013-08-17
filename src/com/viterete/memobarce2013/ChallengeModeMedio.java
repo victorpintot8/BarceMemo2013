@@ -116,8 +116,7 @@ public class ChallengeModeMedio extends Activity {
                     {
                         ImageV.setImageResource(images.get(position));
                         secondCard=new Card(images.get(position));
-                        boolean check=compare(firstCard.getId(),secondCard.getId());
-                        if(check){
+                        if(compare(firstCard.getId(),secondCard.getId())){
                             turns++;
                             TVturns.setText(String.valueOf(turns));
                             parent.setEnabled(false);
