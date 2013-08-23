@@ -317,7 +317,7 @@ public class ChallengeModeDificil extends Activity {
         insertarpuntaje(puntajef);
         AlertDialog.Builder dialog = new AlertDialog.Builder(ChallengeModeDificil.this);
         dialog.setView(vi);
-        dialog.setPositiveButton("Comparte", new DialogInterface.OnClickListener() {
+        dialog.setNegativeButton("Comparte", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int which) {
                 Intent intent = new Intent(Intent.ACTION_SEND);
                 intent.setType("text/plain");
@@ -335,7 +335,7 @@ public class ChallengeModeDificil extends Activity {
 
         });
 
-        dialog.setNegativeButton("Salir", new DialogInterface.OnClickListener() {
+        dialog.setPositiveButton("Salir", new DialogInterface.OnClickListener() {
 
             public void onClick(DialogInterface dialog, int which) {
                 Intent i=new Intent(getApplicationContext(), MainActivity.class);
