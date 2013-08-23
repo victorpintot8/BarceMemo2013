@@ -186,11 +186,14 @@ public class ChallengeModeFacil extends Activity {
             case 11:bonoturnos= turnos *500;
                 TVTbonoturnos.setText(String.valueOf(turnos)+" x 500");
                 break;
-            case 13:bonoturnos= turnos *400;
+            case 12:bonoturnos= turnos *400;
                 TVTbonoturnos.setText(String.valueOf(turnos)+" x 400");
                 break;
-            case 14:bonoturnos= turnos *300;
+            case 13:bonoturnos= turnos *300;
                 TVTbonoturnos.setText(String.valueOf(turnos)+" x 300");
+                break;
+            case 14:bonoturnos= turnos *200;
+                TVTbonoturnos.setText(String.valueOf(turnos)+" x 200");
                 break;
             default:bonoturnos=0;
                 TVTbonoturnos.setText(String.valueOf(turnos)+" + 0");
