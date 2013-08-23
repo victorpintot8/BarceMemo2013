@@ -11,17 +11,24 @@
     <TextView
         android:id="@+id/TVmain"
         android:layout_width="match_parent"
-        android:layout_height="74dp"
+        android:layout_height="wrap_content"
         android:gravity="center"
         android:text="@string/title_main"
-        android:textSize="25sp" android:textStyle="bold|italic" android:textColor="#ff0000" android:focusable="false"
+        android:textSize="30sp" android:textStyle="bold|italic" android:textColor="#ff0000" android:focusable="false"
         android:textIsSelectable="false" android:typeface="serif" android:autoText="false"
             />
 
+    <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/desJuego"
+            android:id="@+id/textView"
+            android:gravity="center"/>
+
     <ImageView
         android:id="@+id/imageView1"
-        android:layout_width="wrap_content"
-        android:layout_height="180dp"
+        android:layout_width="fill_parent"
+        android:layout_height="190dp"
         android:src="@drawable/barcelonalogo"/>
 
     <Button

@@ -301,7 +301,7 @@ public class ChallengeModeMedio extends Activity {
             public void onClick(DialogInterface dialog, int which) {
                 Intent intent = new Intent(Intent.ACTION_SEND);
                 intent.setType("text/plain");
-                intent.putExtra(Intent.EXTRA_TEXT, "Mi puntuación en Barce Memo 2013 fue: "+String.valueOf(puntajef)+" , Quieres superarme? Bajate la aplicación aquí....");
+                intent.putExtra(Intent.EXTRA_TEXT, "Mi puntuación en Barce Memo 2013 fue: "+String.valueOf(puntajef)+" , Quieres superarme? Bajate la aplicación aquí https://play.google.com/store/apps/details?id=com.viterete.memobarce2013 ");
                 startActivity(Intent.createChooser(intent, "Comparte"));
 
             }

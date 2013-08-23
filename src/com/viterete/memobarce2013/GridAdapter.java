@@ -80,7 +80,6 @@ public GridAdapter(Context c, int count1){
                             image.setScaleType(ImageView.ScaleType.CENTER_CROP);
                             image.setPadding(10,10,10,10);
                         }
-
                         break;
                 }
 

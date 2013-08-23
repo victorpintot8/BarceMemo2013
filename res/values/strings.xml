@@ -3,11 +3,12 @@
 
 
     <!--Main Activity-->
-    <string name="title_main">Memorama Barcelona SC 2013 </string>
+    <string name="title_main">Barce Memo 2013</string>
     <string name="start_game">Jugar!</string>
     <string name="preferences">Preferencias</string>
     <string name="creado_por">App creada por Víctor Pinto</string>
-    <string name="app_name">BarceMemo 2013</string>
+    <string name="app_name">Barce Memo 2013</string>
+    <string name="desJuego">Diviertete con el juego de emparejamiento de cartas del ídolo Barcelona SC!</string>
     <string name="selecciona_nivel">Nivel de dificultad</string>
 
     <!--Nivel Fácil-->
