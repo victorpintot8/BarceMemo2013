@@ -196,28 +196,28 @@ public class ChallengeModeFacil extends Activity {
                 TVTbonoturnos.setText(String.valueOf(turnos)+" + 0");
                 break;
         }
-        if(minutos ==0){
-            if(segundos <10){
+        if(minutos==0){
+            if(segundos<10){
                 TVTtiempo.setText("0"+String.valueOf(segundos)+" s");
                 bonotiempo=5000;
                 TVTbonotiempo.setText(String.valueOf(bonotiempo));
             }
-            else if(segundos <12){
+            else if(segundos<12){
                 TVTtiempo.setText(String.valueOf(segundos)+" s");
                 bonotiempo=4000;
                 TVTbonotiempo.setText(String.valueOf(bonotiempo));
             }
-            else if(segundos <15){
+            else if(segundos<15){
                 TVTtiempo.setText(String.valueOf(segundos)+" s");
                 bonotiempo=3000;
                 TVTbonotiempo.setText(String.valueOf(bonotiempo));
             }
-            else if(segundos <20){
+            else if(segundos<20){
                 TVTtiempo.setText(String.valueOf(segundos)+" s");
                 bonotiempo=2000;
                 TVTbonotiempo.setText(String.valueOf(bonotiempo));
             }
-            else if(segundos <25){
+            else if(segundos<25){
                 TVTtiempo.setText(String.valueOf(segundos)+" s");
                 bonotiempo=1000;
                 TVTbonotiempo.setText(String.valueOf(bonotiempo));
@@ -229,14 +229,14 @@ public class ChallengeModeFacil extends Activity {
             }
         }
         else{
-            if(segundos <10){
-                TVTtiempo.setText(String.valueOf(minutos)+"0"+String.valueOf(segundos)+" s");
-                bonotiempo=100;
+            if(segundos<10){
+                TVTtiempo.setText(String.valueOf(minutos)+":0"+String.valueOf(segundos)+" s");
+                bonotiempo=500;
                 TVTbonotiempo.setText(String.valueOf(bonotiempo));
             }
             else{
-                TVTtiempo.setText(String.valueOf(minutos)+String.valueOf(segundos)+" s");
-                bonotiempo=500;
+                TVTtiempo.setText(String.valueOf(minutos)+":"+String.valueOf(segundos)+" s");
+                bonotiempo=100;
                 TVTbonotiempo.setText(String.valueOf(bonotiempo));
             }
         }

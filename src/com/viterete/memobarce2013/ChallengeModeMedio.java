@@ -32,11 +32,11 @@ public class ChallengeModeMedio extends Activity {
     private static boolean isswitch;
     private boolean pisdestroyed=false;
     private BackgroundSound mBackgroundSound=new BackgroundSound();
-    private long seconds=-1,minutes=0;
+    private long segundos =-1, minutos =0;
     private View v1;
     private Card firstCard,secondCard;
     private static Timer myTimer,myTimer2;
-    private int turns,cont=0,contwinner=0,v1pos,puntaje=0,puntajef=0,cuentaregresiva=0,tiempoplayer=0,cancion=0;
+    private int turnos,cont=0,contwinner=0,v1pos,puntaje=0,puntajef=0,cuentaregresiva=0,tiempoplayer=0,cancion=0;
     private Handler mHandler = new Handler();
     private TextView TVturns,TVpuntaje,timer;
     private List<Integer> images=new ArrayList<Integer>();
@@ -56,9 +56,9 @@ public class ChallengeModeMedio extends Activity {
         gv=(GridView) findViewById(R.id.GV1);
         gv.setNumColumns(4);
         if (savedInstanceState != null) {
-            minutes = savedInstanceState.getLong("minutos");
-            seconds = savedInstanceState.getLong("segundos");
-            turns=savedInstanceState.getInt("turnos");
+            minutos = savedInstanceState.getLong("minutos");
+            segundos = savedInstanceState.getLong("segundos");
+            turnos =savedInstanceState.getInt("turnos");
             puntaje=savedInstanceState.getInt("puntaje");
             images.add(savedInstanceState.getInt("imagen0"));
             images.add(savedInstanceState.getInt("imagen1"));
@@ -109,16 +109,16 @@ public class ChallengeModeMedio extends Activity {
                 else{
                     if(v1pos==position){
                         Toast.makeText(getApplicationContext(), "La misma carta fué seleccionada", Toast.LENGTH_SHORT).show();
-                        turns++;
-                        TVturns.setText(String.valueOf(turns));
+                        turnos++;
+                        TVturns.setText(String.valueOf(turnos));
                     }
                     else
                     {
                         ImageV.setImageResource(images.get(position));
                         secondCard=new Card(images.get(position));
                         if(compare(firstCard.getId(),secondCard.getId())){
-                            turns++;
-                            TVturns.setText(String.valueOf(turns));
+                            turnos++;
+                            TVturns.setText(String.valueOf(turnos));
                             parent.setEnabled(false);
                             mHandler.postDelayed(new Runnable(){
                                 public void run() {
@@ -131,7 +131,7 @@ public class ChallengeModeMedio extends Activity {
                             CheckWin(contwinner);
                         }
                         else{
-                            turns++;
+                            turnos++;
                             final ImageView ImageV1=(ImageView) v1;
                             parent.setEnabled(false);
                             mHandler.postDelayed(new Runnable(){
@@ -141,7 +141,7 @@ public class ChallengeModeMedio extends Activity {
                                     ImageV1.setImageResource(R.drawable.bsc14);
                                 }}, 500);
 
-                            TVturns.setText(String.valueOf(turns));
+                            TVturns.setText(String.valueOf(turnos));
                         }
                         cont=0;
                     }
@@ -168,115 +168,115 @@ public class ChallengeModeMedio extends Activity {
         TextView TVTbonoturnos=(TextView)vi.findViewById(R.id.TVFbonoturnos);
         TextView TVTbonotiempo=(TextView)vi.findViewById(R.id.TVFbonotiempo);
         TextView TVTpuntajetotal=(TextView)vi.findViewById(R.id.TVFpuntajetotal);
-        TVTturnos.setText(String.valueOf(turns));
+        TVTturnos.setText(String.valueOf(turnos));
         TVTpuntaje.setText(String.valueOf(puntaje));
         int bonotiempo = 0,bonoturnos=0;
 
-        switch(turns){
-            case 8:bonoturnos=turns*2000;
-                TVTbonoturnos.setText(String.valueOf(turns)+" x 2000");
+        switch(turnos){
+            case 8:bonoturnos= turnos *2000;
+                TVTbonoturnos.setText(String.valueOf(turnos)+" x 2000");
                 break;
-            case 9:bonoturnos=turns*1900;
-                TVTbonoturnos.setText(String.valueOf(turns)+" x 1900");
+            case 9:bonoturnos= turnos *1900;
+                TVTbonoturnos.setText(String.valueOf(turnos)+" x 1900");
                 break;
-            case 10:bonoturnos=turns*1800;
-                TVTbonoturnos.setText(String.valueOf(turns)+" x 1800");
+            case 10:bonoturnos= turnos *1800;
+                TVTbonoturnos.setText(String.valueOf(turnos)+" x 1800");
                 break;
-            case 11:bonoturnos=turns*1700;
-                TVTbonoturnos.setText(String.valueOf(turns)+" x 1700");
+            case 11:bonoturnos= turnos *1700;
+                TVTbonoturnos.setText(String.valueOf(turnos)+" x 1700");
                 break;
-            case 12:bonoturnos=turns*1600;
-                TVTbonoturnos.setText(String.valueOf(turns)+" x 1600");
+            case 12:bonoturnos= turnos *1600;
+                TVTbonoturnos.setText(String.valueOf(turnos)+" x 1600");
                 break;
-            case 13:bonoturnos=turns*1500;
-                TVTbonoturnos.setText(String.valueOf(turns)+" x 1500");
+            case 13:bonoturnos= turnos *1500;
+                TVTbonoturnos.setText(String.valueOf(turnos)+" x 1500");
                 break;
-            case 14:bonoturnos=turns*1400;
-                TVTbonoturnos.setText(String.valueOf(turns)+" x 1400");
+            case 14:bonoturnos= turnos *1400;
+                TVTbonoturnos.setText(String.valueOf(turnos)+" x 1400");
                 break;
-            case 15:bonoturnos=turns*1300;
-                TVTbonoturnos.setText(String.valueOf(turns)+" x 1300");
+            case 15:bonoturnos= turnos *1300;
+                TVTbonoturnos.setText(String.valueOf(turnos)+" x 1300");
                 break;
-            case 16:bonoturnos=turns*1200;
-                TVTbonoturnos.setText(String.valueOf(turns)+" x 1200");
+            case 16:bonoturnos= turnos *1200;
+                TVTbonoturnos.setText(String.valueOf(turnos)+" x 1200");
                 break;
-            case 17:bonoturnos=turns*1100;
-                TVTbonoturnos.setText(String.valueOf(turns)+" x 1100");
+            case 17:bonoturnos= turnos *1100;
+                TVTbonoturnos.setText(String.valueOf(turnos)+" x 1100");
                 break;
-            case 18:bonoturnos=turns*1000;
-                TVTbonoturnos.setText(String.valueOf(turns)+" x 1000");
+            case 18:bonoturnos= turnos *1000;
+                TVTbonoturnos.setText(String.valueOf(turnos)+" x 1000");
                 break;
-            case 19:bonoturnos=turns*900;
-                TVTbonoturnos.setText(String.valueOf(turns)+" x 900");
+            case 19:bonoturnos= turnos *900;
+                TVTbonoturnos.setText(String.valueOf(turnos)+" x 900");
                 break;
-            case 20:bonoturnos=turns*800;
-                TVTbonoturnos.setText(String.valueOf(turns)+" x 800");
+            case 20:bonoturnos= turnos *800;
+                TVTbonoturnos.setText(String.valueOf(turnos)+" x 800");
                 break;
             default:bonoturnos=0;
-                TVTbonoturnos.setText(String.valueOf(turns)+" + 0");
+                TVTbonoturnos.setText(String.valueOf(turnos)+" + 0");
                 break;
         }
-        if(minutes==0){
-            if(seconds<12 && minutes==0){
-                TVTtiempo.setText("0"+String.valueOf(seconds)+" s");
+        if(minutos ==0){
+            if(segundos <12 && minutos ==0){
+                TVTtiempo.setText("0"+String.valueOf(segundos)+" s");
                 bonotiempo=6000;
                 TVTbonotiempo.setText(String.valueOf(bonotiempo));
             }
-            else if(seconds<14 && minutes==0){
-                TVTtiempo.setText(""+String.valueOf(seconds)+" s");
+            else if(segundos <14 && minutos ==0){
+                TVTtiempo.setText(""+String.valueOf(segundos)+" s");
                 bonotiempo=5000;
                 TVTbonotiempo.setText(String.valueOf(bonotiempo));
             }
-            else if(seconds<16 && minutes==0){
-                TVTtiempo.setText(""+String.valueOf(seconds)+" s");
+            else if(segundos <16 && minutos ==0){
+                TVTtiempo.setText(""+String.valueOf(segundos)+" s");
                 bonotiempo=3000;
                 TVTbonotiempo.setText(String.valueOf(bonotiempo));
             }
-            else if(seconds<18 && minutes==0){
-                TVTtiempo.setText("" + String.valueOf(seconds) + " s");
+            else if(segundos <18 && minutos ==0){
+                TVTtiempo.setText("" + String.valueOf(segundos) + " s");
                 bonotiempo=2000;
                 TVTbonotiempo.setText(String.valueOf(bonotiempo));
             }
-            else if(seconds<20 && minutes==0){
-                TVTtiempo.setText(""+String.valueOf(seconds)+" s");
+            else if(segundos <20 && minutos ==0){
+                TVTtiempo.setText(""+String.valueOf(segundos)+" s");
                 bonotiempo=1500;
                 TVTbonotiempo.setText(String.valueOf(bonotiempo));
             }
-            else if(seconds<22 && minutes==0){
-                TVTtiempo.setText(""+String.valueOf(seconds)+" s");
+            else if(segundos <22 && minutos ==0){
+                TVTtiempo.setText(""+String.valueOf(segundos)+" s");
                 bonotiempo=1000;
                 TVTbonotiempo.setText(String.valueOf(bonotiempo));
             }
-            else if(seconds<25 && minutes==0){
-                TVTtiempo.setText(""+String.valueOf(seconds)+" s");
+            else if(segundos <25 && minutos ==0){
+                TVTtiempo.setText(""+String.valueOf(segundos)+" s");
                 bonotiempo=800;
                 TVTbonotiempo.setText(String.valueOf(bonotiempo));
             }
-            else if(seconds<28 && minutes==0){
-                TVTtiempo.setText(""+String.valueOf(seconds)+" s");
+            else if(segundos <28 && minutos ==0){
+                TVTtiempo.setText(""+String.valueOf(segundos)+" s");
                 bonotiempo=700;
                 TVTbonotiempo.setText(String.valueOf(bonotiempo));
             }
-            else if(seconds<30 && minutes==0){
-                TVTtiempo.setText(""+String.valueOf(seconds)+" s");
+            else if(segundos <30 && minutos ==0){
+                TVTtiempo.setText(""+String.valueOf(segundos)+" s");
                 bonotiempo=500;
                 TVTbonotiempo.setText(String.valueOf(bonotiempo));
             }
             else{
-                TVTtiempo.setText(""+String.valueOf(seconds)+" s");
+                TVTtiempo.setText(""+String.valueOf(segundos)+" s");
                 bonotiempo=250;
                 TVTbonotiempo.setText(String.valueOf(bonotiempo));
             }
         }
         else{
-            if(seconds<10 && minutes>0){
-                TVTtiempo.setText(String.valueOf(minutes)+"0"+String.valueOf(seconds)+" s");
-                bonotiempo=100;
+            if(segundos <10 && minutos >0){
+                TVTtiempo.setText(String.valueOf(minutos)+":0"+String.valueOf(segundos)+" s");
+                bonotiempo=500;
                 TVTbonotiempo.setText(String.valueOf(bonotiempo));
             }
             else{
-                TVTtiempo.setText(String.valueOf(minutes)+String.valueOf(seconds)+" s");
-                bonotiempo=50;
+                TVTtiempo.setText(String.valueOf(minutos)+":"+String.valueOf(segundos)+" s");
+                bonotiempo=100;
                 TVTbonotiempo.setText(String.valueOf(bonotiempo));
             }
         }
@@ -323,20 +323,20 @@ public class ChallengeModeMedio extends Activity {
 
     private Runnable Timer_Tick = new Runnable() {
         public void run() {
-            if(seconds<10){
-                timer.setText(String.valueOf(minutes)+":0"+String.valueOf(seconds));
+            if(segundos <10){
+                timer.setText(String.valueOf(minutos)+":0"+String.valueOf(segundos));
             }
             else{
-                timer.setText(String.valueOf(minutes)+":"+String.valueOf(seconds));
+                timer.setText(String.valueOf(minutos)+":"+String.valueOf(segundos));
             }
         }
     };
 
     public void ResetGame(View v){
         myTimer.cancel();
-        seconds=-1;
-        minutes=0;
-        turns=0;
+        segundos =-1;
+        minutos =0;
+        turnos =0;
         TVturns.setText("0");
         gv.setAdapter(adapter);
         cont=0;
@@ -424,7 +424,7 @@ public class ChallengeModeMedio extends Activity {
             mBackgroundSound.execute(pisdestroyed,null,null);
         }
         TVpuntaje.setText(String.valueOf(puntaje));
-        TVturns.setText(String.valueOf(turns));
+        TVturns.setText(String.valueOf(turnos));
     }
     protected void onRestart(){
         super.onRestart();
@@ -449,10 +449,10 @@ public class ChallengeModeMedio extends Activity {
             @Override
             public void run() {
                 TimerMethod();
-                seconds++;
-                if(seconds>=60){
-                    seconds=0;
-                    minutes++;
+                segundos++;
+                if(segundos >=60){
+                    segundos =0;
+                    minutos++;
                 }
             }
         }, 0, 1000);
@@ -518,9 +518,9 @@ public class ChallengeModeMedio extends Activity {
     @Override
     public void onSaveInstanceState(Bundle savedInstanceState) {
         savedInstanceState.putInt("tiempoplayer", tiempoplayer);
-        savedInstanceState.putLong("minutos", minutes);
-        savedInstanceState.putLong("segundos", seconds);
-        savedInstanceState.putInt("turnos", turns);
+        savedInstanceState.putLong("minutos", minutos);
+        savedInstanceState.putLong("segundos", segundos);
+        savedInstanceState.putInt("turnos", turnos);
         savedInstanceState.putInt("puntaje", puntaje);
         savedInstanceState.putInt("imagen0",images.get(0));
         savedInstanceState.putInt("imagen1",images.get(1));
