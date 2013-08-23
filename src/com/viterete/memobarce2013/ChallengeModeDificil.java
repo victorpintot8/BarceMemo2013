@@ -228,74 +228,84 @@ public class ChallengeModeDificil extends Activity {
                 break;
         }
         if(minutos ==0){
-            if(segundos <14 && minutos ==0){
-                TVTtiempo.setText("0"+String.valueOf(segundos)+" s");
+            if(segundos <14){
+                TVTtiempo.setText(String.valueOf(segundos)+" s");
                 bonotiempo=8000;
                 TVTbonotiempo.setText(String.valueOf(bonotiempo));
             }
-            else if(segundos <16 && minutos ==0){
-                TVTtiempo.setText(""+String.valueOf(segundos)+" s");
+            else if(segundos <16){
+                TVTtiempo.setText(String.valueOf(segundos)+" s");
                 bonotiempo=7000;
                 TVTbonotiempo.setText(String.valueOf(bonotiempo));
             }
-            else if(segundos <18 && minutos ==0){
-                TVTtiempo.setText(""+String.valueOf(segundos)+" s");
+            else if(segundos <18){
+                TVTtiempo.setText(String.valueOf(segundos)+" s");
                 bonotiempo=6000;
                 TVTbonotiempo.setText(String.valueOf(bonotiempo));
             }
-            else if(segundos <20 && minutos ==0){
-                TVTtiempo.setText(""+String.valueOf(segundos)+" s");
+            else if(segundos <20){
+                TVTtiempo.setText(String.valueOf(segundos)+" s");
                 bonotiempo=5000;
                 TVTbonotiempo.setText(String.valueOf(bonotiempo));
             }
-            else if(segundos <22 && minutos ==0){
-                TVTtiempo.setText(""+String.valueOf(segundos)+" s");
+            else if(segundos <22){
+                TVTtiempo.setText(String.valueOf(segundos)+" s");
                 bonotiempo=4000;
                 TVTbonotiempo.setText(String.valueOf(bonotiempo));
             }
-            else if(segundos <24 && minutos ==0){
-                TVTtiempo.setText(""+String.valueOf(segundos)+" s");
+            else if(segundos <24){
+                TVTtiempo.setText(String.valueOf(segundos)+" s");
                 bonotiempo=3000;
                 TVTbonotiempo.setText(String.valueOf(bonotiempo));
             }
-            else if(segundos <26 && minutos ==0){
-                TVTtiempo.setText(""+String.valueOf(segundos)+" s");
+            else if(segundos <26){
+                TVTtiempo.setText(String.valueOf(segundos)+" s");
                 bonotiempo=2000;
                 TVTbonotiempo.setText(String.valueOf(bonotiempo));
             }
-            else if(segundos <28 && minutos ==0){
-                TVTtiempo.setText(""+String.valueOf(segundos)+" s");
+            else if(segundos <28){
+                TVTtiempo.setText(String.valueOf(segundos)+" s");
                 bonotiempo=1000;
                 TVTbonotiempo.setText(String.valueOf(bonotiempo));
             }
-            else if(segundos <30 && minutos ==0){
-                TVTtiempo.setText(""+String.valueOf(segundos)+" s");
+            else if(segundos <30){
+                TVTtiempo.setText(String.valueOf(segundos)+" s");
                 bonotiempo=900;
                 TVTbonotiempo.setText(String.valueOf(bonotiempo));
             }
-            else if(segundos <32 && minutos ==0){
-                TVTtiempo.setText(""+String.valueOf(segundos)+" s");
+            else if(segundos <32){
+                TVTtiempo.setText(String.valueOf(segundos)+" s");
                 bonotiempo=800;
                 TVTbonotiempo.setText(String.valueOf(bonotiempo));
             }
-            else if(segundos <34 && minutos ==0){
-                TVTtiempo.setText(""+String.valueOf(segundos)+" s");
+            else if(segundos <34){
+                TVTtiempo.setText(String.valueOf(segundos)+" s");
                 bonotiempo=700;
                 TVTbonotiempo.setText(String.valueOf(bonotiempo));
             }
-            else if(segundos <38 && minutos ==0){
-                TVTtiempo.setText(""+String.valueOf(segundos)+" s");
+            else if(segundos <38){
+                TVTtiempo.setText(String.valueOf(segundos)+" s");
                 bonotiempo=600;
                 TVTbonotiempo.setText(String.valueOf(bonotiempo));
             }
-            else if(segundos <40 && minutos ==0){
-                TVTtiempo.setText(""+String.valueOf(segundos)+" s");
+            else if(segundos <40){
+                TVTtiempo.setText(String.valueOf(segundos)+" s");
                 bonotiempo=550;
                 TVTbonotiempo.setText(String.valueOf(bonotiempo));
             }
-            else if(segundos <50 && minutos ==0){
-                TVTtiempo.setText(""+String.valueOf(segundos)+" s");
+            else if(segundos <50){
+                TVTtiempo.setText(String.valueOf(segundos)+" s");
                 bonotiempo=500;
+                TVTbonotiempo.setText(String.valueOf(bonotiempo));
+            }
+            else if(segundos <55){
+                TVTtiempo.setText(String.valueOf(segundos)+" s");
+                bonotiempo=450;
+                TVTbonotiempo.setText(String.valueOf(bonotiempo));
+            }
+            else{
+                TVTtiempo.setText(String.valueOf(segundos)+" s");
+                bonotiempo=300;
                 TVTbonotiempo.setText(String.valueOf(bonotiempo));
             }
         }
