@@ -18,7 +18,7 @@ public class Jugador {
 
     private static final String N_BD="Puntajes Altos";
     public static final String N_TABLA="Tabla_Jugador";
-    public static final int VERISON_BD=1;
+    public static final int VERSION_BD=1;
 
     private Helper mHelper;
     private final Context mContexto;
@@ -56,7 +56,7 @@ public class Jugador {
     private static class Helper extends SQLiteOpenHelper{
 
         public Helper(Context context){
-            super(context,N_BD,null,VERISON_BD);
+            super(context,N_BD,null,VERSION_BD);
         }
 
         @Override

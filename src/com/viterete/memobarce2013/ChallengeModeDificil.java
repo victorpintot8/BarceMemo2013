@@ -378,7 +378,6 @@ public class ChallengeModeDificil extends Activity {
         minutos =0;
         turnos =0;
         TVturns.setText("0");
-        gv.setAdapter(adapter);
         cont=0;
         contwinner=0;
         puntaje=0;
@@ -387,11 +386,13 @@ public class ChallengeModeDificil extends Activity {
         ResetTiempo();
         GridAdapterTemp adaptert=new GridAdapterTemp(this,20,images.get(0),images.get(1),images.get(2),images.get(3),images.get(4),images.get(5),images.get(6),images.get(7),images.get(8),images.get(9),images.get(10),images.get(11),images.get(12),images.get(13),images.get(14),images.get(15),images.get(16),images.get(17),images.get(18),images.get(19));
         gv.setAdapter(adaptert);
+        gv.setEnabled(false);
 
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
                 gv.setAdapter(adapter);
+                gv.setEnabled(true);
             }
         }, 750);
     }
