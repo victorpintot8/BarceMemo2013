@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="@string/title_main"
-        android:textSize="38sp" android:textStyle="bold|italic" android:textColor="#ff0000" android:focusable="false"
+        android:textSize="60sp" android:textStyle="bold|italic" android:textColor="#ff0000" android:focusable="false"
         android:textIsSelectable="false" android:typeface="serif" android:autoText="false"
             />
 
