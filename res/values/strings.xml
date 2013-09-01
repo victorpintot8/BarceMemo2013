@@ -37,7 +37,8 @@
 
 
    <!--Mejores Puntajes-->
-    <string name="puntajes">Mejores Puntajes</string>
+    <string name="title_activity_mejores_puntajes">Mejores puntajes</string>
+    <string name="puntajes">Mejores puntajes</string>
     <string name="pnombre">Nombre</string>
     <string name="ppuntaje">Puntaje</string>
     <string name="pposicion">No.</string>

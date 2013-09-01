@@ -73,7 +73,7 @@
         </activity>
         <activity
                 android:name="com.viterete.memobarce2013.PuntajesAltos"
-                android:label="Puntajes más altos"
+                android:label="@string/title_activity_mejores_puntajes"
                 android:screenOrientation="portrait"
                 android:configChanges="keyboardHidden|orientation|screenSize"/>
     </application>
