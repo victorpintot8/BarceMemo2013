@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="@string/title_main"
-        android:textSize="60sp" android:textStyle="bold|italic" android:textColor="#ff0000" android:focusable="false"
+        android:textSize="38sp" android:textStyle="bold|italic" android:textColor="#ff0000" android:focusable="false"
         android:textIsSelectable="false" android:typeface="serif" android:autoText="false"
             />
 
@@ -23,31 +23,30 @@
             android:layout_height="wrap_content"
             android:text="@string/desJuego"
             android:id="@+id/desJuego"
-            android:gravity="center"
-        android:textSize="25sp" />
+            android:gravity="center"/>
 
     <ImageView
         android:id="@+id/imageView1"
         android:layout_width="fill_parent"
-        android:layout_height="403dp"
+        android:layout_height="225dp"
         android:src="@drawable/barcelonalogo"
             />
 
     <Button
         android:id="@+id/BTstart"
         android:layout_width="match_parent"
-        android:layout_height="80dp"
+        android:layout_height="wrap_content"
         android:onClick="start"
         android:text="@string/start_game" android:textStyle="bold" android:layout_marginRight="60dp"
         android:layout_marginLeft="60dp"
-        android:textSize="50sp"
+        android:textSize="30sp"
         android:textColor="#ffff00"
         android:background="#282828"
-        android:layout_marginTop="12dp"/>
+        android:layout_marginTop="8dp"/>
 
     <Button
             android:layout_width="match_parent"
-            android:layout_height="80dp"
+            android:layout_height="wrap_content"
             android:text="@string/puntajes"
             android:id="@+id/BTpuntaje"
             android:layout_marginLeft="60dp"
@@ -56,28 +55,24 @@
             android:onClick="puntaje"
             android:textColor="#ffff00"
             android:background="#282828"
-            android:layout_marginTop="8dp"
-        android:textSize="30sp" />
+            android:layout_marginTop="8dp"/>
 
     <Button
         android:id="@+id/BTpreferences"
         android:layout_width="match_parent"
-        android:layout_height="80dp"
+        android:layout_height="wrap_content"
         android:text="@string/preferences" android:textStyle="bold" android:layout_marginLeft="60dp"
         android:layout_marginRight="60dp"
         android:onClick="Epreferencias"
         android:textColor="#ffff00"
         android:background="#282828"
-        android:layout_marginTop="8dp"
-        android:textSize="30sp" />
+        android:layout_marginTop="8dp"/>
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:gravity="bottom"
-        android:text="@string/creado_por"
-        android:textSize="20sp"
-        android:layout_marginTop="50dp" />
+        android:text="@string/creado_por"/>
 
 </LinearLayout>

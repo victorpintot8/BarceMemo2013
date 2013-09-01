@@ -19,6 +19,11 @@
         <screen android:screenSize="large" android:screenDensity="xhdpi" />
         <screen android:screenSize="large" android:screenDensity="480" />
 
+        <screen android:screenSize="xlarge" android:screenDensity="mdpi" />
+        <screen android:screenSize="xlarge" android:screenDensity="hdpi" />
+        <screen android:screenSize="xlarge" android:screenDensity="xhdpi" />
+        <screen android:screenSize="xlarge" android:screenDensity="480" />
+
     </compatible-screens>
 
     <uses-sdk

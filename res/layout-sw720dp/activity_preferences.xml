@@ -15,46 +15,48 @@
                 android:layout_height="wrap_content"
                 android:text="@string/musica"
                 android:id="@+id/TVmusica"
-                android:textSize="40sp"
+                android:textSize="50sp"
                 android:textStyle="bold"
                 android:layout_marginTop="15dp"
                 android:layout_marginLeft="20dp"
-                android:layout_weight="0.5"
-                />
+                android:layout_weight="0.5"/>
 
-        <ToggleButton
+        <Switch
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="New ToggleButton"
-                android:id="@+id/TG1"
-                android:layout_marginRight="30dp"
-                android:textOff="OFF"
+                android:id="@+id/switch1"
+                android:checked="true"
+                android:enabled="true"
                 android:textOn="ON"
-                android:layout_weight="0.1"
-                android:layout_marginTop="15dp"/>
+                android:textOff="OFF"
+                android:layout_marginRight="30dp"
+            android:background="#282828"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="10dp"/>
 
     </LinearLayout>
 
     <LinearLayout
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+        android:layout_marginTop="40dp">
 
         <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/cancion"
-                android:id="@+id/textView"
-                android:layout_gravity="left|center_vertical"
+                android:id="@+id/TVpcancion"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="15dp"
-                android:textSize="40sp"
+                android:textSize="50sp"
                 android:textStyle="bold"/>
 
         <Spinner
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/SPcancion"
-                android:layout_marginRight="30dp"/>
+                android:layout_marginRight="30dp"
+                />
     </LinearLayout>
 
 </LinearLayout>

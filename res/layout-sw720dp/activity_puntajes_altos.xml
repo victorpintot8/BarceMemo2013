@@ -16,7 +16,7 @@
 
         <Button
                 android:layout_width="wrap_content"
-                android:layout_height="60dp"
+                android:layout_height="80dp"
                 android:text="@string/botonyo"
                 android:id="@+id/BTyo"
                 android:layout_weight="0.5"
@@ -28,7 +28,7 @@
 
         <Button
                 android:layout_width="wrap_content"
-                android:layout_height="60dp"
+                android:layout_height="80dp"
                 android:text="@string/botontodos"
                 android:id="@+id/BTtodos"
                 android:layout_weight="0.5"
@@ -71,7 +71,7 @@
                         android:text="@string/pnombre"
                         android:id="@+id/textView2"
                         android:layout_weight="0.6"
-                        android:textSize="35sp"
+                        android:textSize="40sp"
                         android:textColor="#ff0000"/>
 
                 <TextView
@@ -80,7 +80,7 @@
                         android:text="@string/ppuntaje"
                         android:id="@+id/textView3"
                         android:layout_weight="0.3"
-                        android:textSize="35sp"
+                        android:textSize="40sp"
                         android:textColor="#ff0000"/>
             </LinearLayout>
 
@@ -138,7 +138,7 @@
                         android:text="@string/pposicion"
                         android:id="@+id/textView4"
                         android:layout_weight="0.1"
-                        android:textSize="35sp"
+                        android:textSize="40sp"
                         android:textColor="#ff0000"/>
 
                 <TextView
@@ -147,7 +147,7 @@
                         android:text="@string/pnombre"
                         android:id="@+id/textView5"
                         android:layout_weight="0.4"
-                        android:textSize="35sp"
+                        android:textSize="40sp"
                         android:textColor="#ff0000"/>
 
                 <TextView

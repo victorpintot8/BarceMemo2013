@@ -15,7 +15,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/musica"
                 android:id="@+id/TVmusica"
-                android:textSize="20sp"
+                android:textSize="40sp"
                 android:textStyle="bold"
                 android:layout_marginTop="15dp"
                 android:layout_marginLeft="20dp"
@@ -30,8 +30,7 @@
                 android:textOn="ON"
                 android:textOff="OFF"
                 android:layout_marginRight="30dp"
-                android:gravity="right"
-                android:background="#282828"
+            android:background="#282828"
                 android:layout_marginTop="15dp"
                 android:layout_marginBottom="10dp"/>
 
@@ -39,7 +38,8 @@
 
     <LinearLayout
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+        android:layout_marginTop="40dp">
 
         <TextView
                 android:layout_width="wrap_content"
@@ -48,7 +48,7 @@
                 android:id="@+id/TVpcancion"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="15dp"
-                android:textSize="20sp"
+                android:textSize="40sp"
                 android:textStyle="bold"/>
 
         <Spinner

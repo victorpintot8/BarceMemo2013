@@ -11,7 +11,7 @@
             android:layout_height="wrap_content"
             android:text="Ganaste!!!"
             android:id="@+id/textView" android:layout_gravity="center" android:textStyle="bold"
-            android:textSize="45sp" android:textColor="#d02818"/>
+            android:textSize="40sp" android:textColor="#d02818"/>
     <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
@@ -29,7 +29,7 @@
                 android:gravity="right"
                 android:text="Turnos: "
                 android:textColor="#d02818"
-                android:textSize="25sp"/>
+                android:textSize="20sp"/>
 
             <TextView
                 android:id="@+id/textView4"
@@ -38,7 +38,7 @@
                 android:gravity="right"
                 android:text="Tiempo: "
                 android:textColor="#d02818"
-                android:textSize="25sp"/>
+                android:textSize="20sp"/>
 
             <TextView
                 android:id="@+id/textView5"
@@ -47,7 +47,7 @@
                 android:gravity="right"
                 android:text="Puntaje: "
                 android:textColor="#d02818"
-                android:textSize="25sp"/>
+                android:textSize="20sp"/>
 
             <TextView
                 android:id="@+id/textView6"
@@ -56,7 +56,7 @@
                 android:gravity="right"
                 android:text="Bono por turnos: "
                 android:textColor="#d02818"
-                android:textSize="25sp"/>
+                android:textSize="20sp"/>
 
             <TextView
                 android:id="@+id/textView3"
@@ -65,7 +65,7 @@
                 android:gravity="right"
                 android:text="Bono por tiempo: "
                 android:textColor="#d02818"
-                android:textSize="25sp"/>
+                android:textSize="20sp"/>
 
             <TextView
                 android:id="@+id/textView7"
@@ -75,7 +75,7 @@
                 android:gravity="right"
                 android:text="Puntaje total: "
                 android:textColor="#d02818"
-                android:textSize="25sp"/>
+                android:textSize="20sp"/>
 
         </LinearLayout>
         <LinearLayout
@@ -87,42 +87,42 @@
                 android:id="@+id/TVFturnos"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="25sp"/>
+                android:textSize="20sp"/>
 
             <TextView
                 android:id="@+id/TVFtiempo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="left|center_vertical"
-                android:textSize="25sp"/>
+                android:textSize="20sp"/>
 
             <TextView
                 android:id="@+id/TVFpuntaje"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="left|center_vertical"
-                android:textSize="25sp"/>
+                android:textSize="20sp"/>
 
             <TextView
                 android:id="@+id/TVFbonoturnos"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="left|center_vertical"
-                android:textSize="25sp"/>
+                android:textSize="20sp"/>
 
             <TextView
                 android:id="@+id/TVFbonotiempo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="left|center_vertical"
-                android:textSize="25sp"/>
+                android:textSize="20sp"/>
 
             <TextView
                 android:id="@+id/TVFpuntajetotal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="left|center_vertical"
-                android:textSize="25sp"/>
+                android:textSize="20sp"/>
 
         </LinearLayout>
     </LinearLayout>

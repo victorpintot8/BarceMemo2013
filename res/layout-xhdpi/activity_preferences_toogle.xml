@@ -15,7 +15,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/musica"
                 android:id="@+id/TVmusica"
-                android:textSize="40sp"
+                android:textSize="20sp"
                 android:textStyle="bold"
                 android:layout_marginTop="15dp"
                 android:layout_marginLeft="20dp"
@@ -47,7 +47,7 @@
                 android:layout_gravity="left|center_vertical"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="15dp"
-                android:textSize="40sp"
+                android:textSize="20sp"
                 android:textStyle="bold"/>
 
         <Spinner
