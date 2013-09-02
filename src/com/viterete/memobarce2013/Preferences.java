@@ -26,6 +26,7 @@ public class Preferences extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+
         if (android.os.Build.VERSION.SDK_INT >= 14) {
             setContentView(R.layout.activity_preferences);
             sw=(Switch)findViewById(R.id.switch1);
