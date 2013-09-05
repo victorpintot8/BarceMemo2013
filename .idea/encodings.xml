@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false" />
+  <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false">
+    <file url="file://$PROJECT_DIR$/res/drawable-sw600dp/bsc14.jpg" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/res/drawable-sw600dp/card1.jpg" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/res/drawable-sw600dp/card10.png" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/res/drawable-sw600dp/card2.jpg" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/res/drawable-sw600dp/card3.jpg" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/res/drawable-sw600dp/card4.jpg" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/res/drawable-sw600dp/card5.jpg" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/res/drawable-sw600dp/card6.jpg" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/res/drawable-sw600dp/card7.png" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/res/drawable-sw600dp/card8.jpg" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/res/drawable-sw600dp/card9.jpg" charset="UTF-8" />
+  </component>
 </project>
 

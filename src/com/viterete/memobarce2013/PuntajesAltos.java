@@ -16,7 +16,7 @@ import java.util.Iterator;
  * Created by Victor on 7/06/13.
  */
 public class PuntajesAltos extends Activity {
-    private ViewGroup LYyo,LYtodos,LYnum,LYnombre,LYpuntaje;
+    private ViewGroup LYyo,LYnum,LYnombre,LYpuntaje;
     private TextView num,nombre,puntaje;
     private ArrayList values=new ArrayList();
     private Jugador jugador=new Jugador(PuntajesAltos.this);
@@ -24,11 +24,10 @@ public class PuntajesAltos extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_puntajes_altos);
 
-        LYyo=(ViewGroup)findViewById(R.id.LYyo);
-        LYtodos=(ViewGroup)findViewById(R.id.LYtodos);
-        LYnum=(ViewGroup)findViewById(R.id.LYnum);
-        LYnombre=(ViewGroup)findViewById(R.id.LYnombre);
-        LYpuntaje=(ViewGroup)findViewById(R.id.LYpuntaje);
+        //LYyo=(ViewGroup)findViewById(R.id.LYyo);
+        //LYnum=(ViewGroup)findViewById(R.id.LYnum);
+        //LYnombre=(ViewGroup)findViewById(R.id.LYnombre);
+        //LYpuntaje=(ViewGroup)findViewById(R.id.LYpuntaje);
 
         try{
 
@@ -69,31 +68,6 @@ public class PuntajesAltos extends Activity {
         catch (Exception e){
             e.printStackTrace();
         }
-    }
-
-    public void mostrarPuntajeYo(View v){
-        LYyo.setVisibility(View.VISIBLE);
-        LYtodos.setVisibility(View.GONE);
-    }
-
-    public void mostrarPuntajeTodos(View v){
-        TextView title = new TextView(PuntajesAltos.this);
-        title.setText("Advertencia");
-        title.setTextSize(20);
-        title.setGravity(Gravity.CENTER);
-        LYtodos.setVisibility(View.VISIBLE);
-        LYyo.setVisibility(View.GONE);
-        AlertDialog.Builder builder = new AlertDialog.Builder(PuntajesAltos.this);
-        builder.setCustomTitle(title);
-        builder.setMessage("Esta función no está disponible por el momento...");
-        builder.setNegativeButton("OK", new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int id) {
-                dialog.cancel();
-
-            }
-
-        });
-        AlertDialog alert = builder.show();
     }
 
     protected void onDestroy(){

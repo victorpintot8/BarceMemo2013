@@ -350,6 +350,7 @@ public class ChallengeModeDificil extends Activity {
             public void onClick(DialogInterface dialog, int which) {
                 Intent i=new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(i);
+                finish();
             }
         });
         dialog.show();
