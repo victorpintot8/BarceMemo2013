@@ -3,6 +3,7 @@ package com.viterete.memobarce2013;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -17,12 +18,9 @@ import android.widget.TextView;
 import android.widget.ToggleButton;
 
 public class Preferences extends Activity {
-    private TextView v;
     private Switch sw;
     private ToggleButton toggle;
-    private static boolean s=true;
     private Spinner sp;
-    private static int ncancion;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -34,14 +32,16 @@ public class Preferences extends Activity {
                 @Override
                 public void onCheckedChanged(CompoundButton buttonView,
                                              boolean isChecked) {
-
+                    SharedPreferences preferences =getSharedPreferences("MisPreferencias", Context.MODE_PRIVATE);
                     if(isChecked){
-                        s=true;
-
+                        SharedPreferences.Editor editor = preferences.edit();
+                        editor.putBoolean("sCancion", true);
+                        editor.commit();
                     }
                     else{
-                        s=false;
-
+                        SharedPreferences.Editor editor = preferences.edit();
+                        editor.putBoolean("sCancion", false);
+                        editor.commit();
                     }
 
                 }
@@ -53,26 +53,31 @@ public class Preferences extends Activity {
                 @Override
                 public void onCheckedChanged(CompoundButton buttonView,
                                              boolean isChecked) {
-
+                    SharedPreferences preferences =getSharedPreferences("MisPreferencias", Context.MODE_PRIVATE);
                     if(isChecked){
-                        s=true;
-
+                        SharedPreferences.Editor editor = preferences.edit();
+                        editor.putBoolean("sCancion", true);
+                        editor.commit();
                     }
                     else{
-                        s=false;
+                        SharedPreferences.Editor editor = preferences.edit();
+                        editor.putBoolean("sCancion", false);
+                        editor.commit();
                     }
 
                 }
             });
         }
-        //adaptar el Spinner para que sea aceptado por Todas las API de Android desde Froyo API
         sp=(Spinner)findViewById(R.id.SPcancion);
         ArrayAdapter<String> adapter=new ArrayAdapter<String>(this,R.layout.custom_spinner_cancion,R.id.TVsp,getResources().getStringArray(R.array.canciones));
         adapter.setDropDownViewResource(R.layout.custom_spinner_cancion);
         sp.setAdapter(adapter);
         sp.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener(){
             public void onItemSelected(AdapterView<?> parentView, View selectedItemView,int position, long id){
-                ncancion=position;
+                SharedPreferences preferences =getSharedPreferences("MisPreferencias", Context.MODE_PRIVATE);
+                SharedPreferences.Editor editor = preferences.edit();
+                editor.putInt("nCancion",position);
+                editor.commit();
             }
             public void onNothingSelected(AdapterView<?> parentView){
 
@@ -84,7 +89,6 @@ public class Preferences extends Activity {
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.preferences, menu);
 		return true;
 	}
@@ -115,21 +119,13 @@ public class Preferences extends Activity {
 
     protected void onResume(){
         super.onResume();
+        SharedPreferences preferences =getSharedPreferences("MisPreferencias", Context.MODE_PRIVATE);
         if (android.os.Build.VERSION.SDK_INT >= 14) {
-            sw.setChecked(s);
+            sw.setChecked(preferences.getBoolean("sCancion",false));
         } else {
-            toggle.setChecked(s);
+            toggle.setChecked(preferences.getBoolean("sCancion",false));
         }
-        sp.setSelection(ncancion);
+        sp.setSelection(preferences.getInt("nCancion",0));
     }
-
-    public int Cancion(){
-        return ncancion;
-    }
-
-   public boolean estadoSwitch(){
-       return s;
-   }
-
 
 }

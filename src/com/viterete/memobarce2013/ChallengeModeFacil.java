@@ -8,6 +8,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.AsyncTask;
@@ -74,8 +75,9 @@ public class ChallengeModeFacil extends Activity {
             imagenes.add(savedInstanceState.getInt("imagen11"));
         } else {
             Preferences p=new Preferences();
-            isswitch=p.estadoSwitch();
-            cancion=p.Cancion();
+            SharedPreferences preferences =getSharedPreferences("MisPreferencias", Context.MODE_PRIVATE);
+            isswitch=preferences.getBoolean("sCancion",false);
+            cancion=preferences.getInt("nCancion",0);
             loadImages();
             GridAdapterTemp adaptert=new GridAdapterTemp(this,12, imagenes.get(0), imagenes.get(1), imagenes.get(2), imagenes.get(3), imagenes.get(4), imagenes.get(5), imagenes.get(6), imagenes.get(7), imagenes.get(8), imagenes.get(9), imagenes.get(10), imagenes.get(11));
             gv.setAdapter(adaptert);
