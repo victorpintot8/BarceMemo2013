@@ -109,11 +109,17 @@ public GridAdapter(Context c, int count1){
                             break;
                         case DisplayMetrics.DENSITY_XHIGH:
                             if(count==20){
-                                image.setLayoutParams(new GridView.LayoutParams(145,145));
+                                image.setLayoutParams(new GridView.LayoutParams(150,150));
                                 image.setScaleType(ImageView.ScaleType.CENTER_CROP);
                                 image.setPadding(8,6,8,6);
-                            }else{
+                            }
+                            else if(count==16){
                                 image.setLayoutParams(new GridView.LayoutParams(175,175));
+                                image.setScaleType(ImageView.ScaleType.CENTER_CROP);
+                                image.setPadding(10,10,10,10);
+                            }
+                            else{
+                                image.setLayoutParams(new GridView.LayoutParams(195,195));
                                 image.setScaleType(ImageView.ScaleType.CENTER_CROP);
                                 image.setPadding(10,10,10,10);
                             }

@@ -38,8 +38,8 @@ public class ChallengeModeMedio extends Activity {
     private static Timer myTimer,myTimer2;
     private int turnos,cont=0,contwinner=0,v1pos,puntaje=0,puntajef=0,cuentaregresiva=0,tiempoplayer=0,cancion=0;
     private Handler mHandler = new Handler();
-    private TextView TVturns,TVpuntaje,timer;
-    private List<Integer> images=new ArrayList<Integer>();
+    private TextView TVturnos,TVpuntaje,TVtiempo;
+    private List<Integer> imagenes=new ArrayList<Integer>();
     private GridView gv;
     private GridAdapter adapter=new GridAdapter(this,16);
     private Jugador jugador;
@@ -50,9 +50,9 @@ public class ChallengeModeMedio extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_challenge_mode_medio);
         jugador=new Jugador(ChallengeModeMedio.this);
-        timer=(TextView)findViewById(R.id.TVCMtimer);
+        TVtiempo =(TextView)findViewById(R.id.TVCMtimer);
         TVpuntaje=(TextView)findViewById(R.id.TVCMpoints);
-        TVturns=(TextView)findViewById(R.id.TVCMturns);
+        TVturnos =(TextView)findViewById(R.id.TVCMturns);
         gv=(GridView) findViewById(R.id.GV1);
         gv.setNumColumns(4);
         if (savedInstanceState != null) {
@@ -60,28 +60,28 @@ public class ChallengeModeMedio extends Activity {
             segundos = savedInstanceState.getLong("segundos");
             turnos =savedInstanceState.getInt("turnos");
             puntaje=savedInstanceState.getInt("puntaje");
-            images.add(savedInstanceState.getInt("imagen0"));
-            images.add(savedInstanceState.getInt("imagen1"));
-            images.add(savedInstanceState.getInt("imagen2"));
-            images.add(savedInstanceState.getInt("imagen3"));
-            images.add(savedInstanceState.getInt("imagen4"));
-            images.add(savedInstanceState.getInt("imagen5"));
-            images.add(savedInstanceState.getInt("imagen6"));
-            images.add(savedInstanceState.getInt("imagen7"));
-            images.add(savedInstanceState.getInt("imagen8"));
-            images.add(savedInstanceState.getInt("imagen9"));
-            images.add(savedInstanceState.getInt("imagen10"));
-            images.add(savedInstanceState.getInt("imagen11"));
-            images.add(savedInstanceState.getInt("imagen12"));
-            images.add(savedInstanceState.getInt("imagen13"));
-            images.add(savedInstanceState.getInt("imagen14"));
-            images.add(savedInstanceState.getInt("imagen15"));
+            imagenes.add(savedInstanceState.getInt("imagen0"));
+            imagenes.add(savedInstanceState.getInt("imagen1"));
+            imagenes.add(savedInstanceState.getInt("imagen2"));
+            imagenes.add(savedInstanceState.getInt("imagen3"));
+            imagenes.add(savedInstanceState.getInt("imagen4"));
+            imagenes.add(savedInstanceState.getInt("imagen5"));
+            imagenes.add(savedInstanceState.getInt("imagen6"));
+            imagenes.add(savedInstanceState.getInt("imagen7"));
+            imagenes.add(savedInstanceState.getInt("imagen8"));
+            imagenes.add(savedInstanceState.getInt("imagen9"));
+            imagenes.add(savedInstanceState.getInt("imagen10"));
+            imagenes.add(savedInstanceState.getInt("imagen11"));
+            imagenes.add(savedInstanceState.getInt("imagen12"));
+            imagenes.add(savedInstanceState.getInt("imagen13"));
+            imagenes.add(savedInstanceState.getInt("imagen14"));
+            imagenes.add(savedInstanceState.getInt("imagen15"));
         } else {
             Preferences p=new Preferences();
             isswitch=p.estadoSwitch();
             cancion=p.Cancion();
             loadImages();
-            GridAdapterTemp adaptert=new GridAdapterTemp(this,16,images.get(0),images.get(1),images.get(2),images.get(3),images.get(4),images.get(5),images.get(6),images.get(7),images.get(8),images.get(9),images.get(10),images.get(11),images.get(12),images.get(13),images.get(14),images.get(15));
+            GridAdapterTemp adaptert=new GridAdapterTemp(this,16, imagenes.get(0), imagenes.get(1), imagenes.get(2), imagenes.get(3), imagenes.get(4), imagenes.get(5), imagenes.get(6), imagenes.get(7), imagenes.get(8), imagenes.get(9), imagenes.get(10), imagenes.get(11), imagenes.get(12), imagenes.get(13), imagenes.get(14), imagenes.get(15));
             gv.setAdapter(adaptert);
             gv.setEnabled(false);
             new Handler().postDelayed(new Runnable() {
@@ -102,23 +102,23 @@ public class ChallengeModeMedio extends Activity {
                 if(cont==0){
                     v1=v;
                     v1pos=position;
-                    firstCard=new Card(images.get(position));
-                    ImageV.setImageResource(images.get(position));
+                    firstCard=new Card(imagenes.get(position));
+                    ImageV.setImageResource(imagenes.get(position));
                     cont++;
                 }
                 else{
                     if(v1pos==position){
                         Toast.makeText(getApplicationContext(), "La misma carta fué seleccionada", Toast.LENGTH_SHORT).show();
                         turnos++;
-                        TVturns.setText(String.valueOf(turnos));
+                        TVturnos.setText(String.valueOf(turnos));
                     }
                     else
                     {
-                        ImageV.setImageResource(images.get(position));
-                        secondCard=new Card(images.get(position));
+                        ImageV.setImageResource(imagenes.get(position));
+                        secondCard=new Card(imagenes.get(position));
                         if(compare(firstCard.getId(),secondCard.getId())){
                             turnos++;
-                            TVturns.setText(String.valueOf(turnos));
+                            TVturnos.setText(String.valueOf(turnos));
                             parent.setEnabled(false);
                             mHandler.postDelayed(new Runnable(){
                                 public void run() {
@@ -141,7 +141,7 @@ public class ChallengeModeMedio extends Activity {
                                     ImageV1.setImageResource(R.drawable.bsc14);
                                 }}, 500);
 
-                            TVturns.setText(String.valueOf(turnos));
+                            TVturnos.setText(String.valueOf(turnos));
                         }
                         cont=0;
                     }
@@ -335,10 +335,10 @@ public class ChallengeModeMedio extends Activity {
     private Runnable Timer_Tick = new Runnable() {
         public void run() {
             if(segundos <10){
-                timer.setText(String.valueOf(minutos)+":0"+String.valueOf(segundos));
+                TVtiempo.setText(String.valueOf(minutos) + ":0" + String.valueOf(segundos));
             }
             else{
-                timer.setText(String.valueOf(minutos)+":"+String.valueOf(segundos));
+                TVtiempo.setText(String.valueOf(minutos) + ":" + String.valueOf(segundos));
             }
         }
     };
@@ -348,14 +348,14 @@ public class ChallengeModeMedio extends Activity {
         segundos =-1;
         minutos =0;
         turnos =0;
-        TVturns.setText("0");
+        TVturnos.setText("0");
         cont=0;
         contwinner=0;
         puntaje=0;
         TVpuntaje.setText("0");
         loadImages();
         ResetTiempo();
-        GridAdapterTemp adaptert=new GridAdapterTemp(this,16,images.get(0),images.get(1),images.get(2),images.get(3),images.get(4),images.get(5),images.get(6),images.get(7),images.get(8),images.get(9),images.get(10),images.get(11),images.get(12),images.get(13),images.get(14),images.get(15));
+        GridAdapterTemp adaptert=new GridAdapterTemp(this,16, imagenes.get(0), imagenes.get(1), imagenes.get(2), imagenes.get(3), imagenes.get(4), imagenes.get(5), imagenes.get(6), imagenes.get(7), imagenes.get(8), imagenes.get(9), imagenes.get(10), imagenes.get(11), imagenes.get(12), imagenes.get(13), imagenes.get(14), imagenes.get(15));
         gv.setAdapter(adaptert);
         gv.setEnabled(false);
 
@@ -380,24 +380,24 @@ public class ChallengeModeMedio extends Activity {
     }
 
     private void loadImages() {
-        images.clear();
-        images.add(R.drawable.card1);
-        images.add(R.drawable.card2);
-        images.add(R.drawable.card3);
-        images.add(R.drawable.card4);
-        images.add(R.drawable.card5);
-        images.add(R.drawable.card6);
-        images.add(R.drawable.card7);
-        images.add(R.drawable.card8);
-        images.add(R.drawable.card1);
-        images.add(R.drawable.card2);
-        images.add(R.drawable.card3);
-        images.add(R.drawable.card4);
-        images.add(R.drawable.card5);
-        images.add(R.drawable.card6);
-        images.add(R.drawable.card7);
-        images.add(R.drawable.card8);
-        shuffle(images);
+        imagenes.clear();
+        imagenes.add(R.drawable.card1);
+        imagenes.add(R.drawable.card2);
+        imagenes.add(R.drawable.card3);
+        imagenes.add(R.drawable.card4);
+        imagenes.add(R.drawable.card5);
+        imagenes.add(R.drawable.card6);
+        imagenes.add(R.drawable.card7);
+        imagenes.add(R.drawable.card8);
+        imagenes.add(R.drawable.card1);
+        imagenes.add(R.drawable.card2);
+        imagenes.add(R.drawable.card3);
+        imagenes.add(R.drawable.card4);
+        imagenes.add(R.drawable.card5);
+        imagenes.add(R.drawable.card6);
+        imagenes.add(R.drawable.card7);
+        imagenes.add(R.drawable.card8);
+        shuffle(imagenes);
     }
 
     private static void swap(List<Integer> l, int i, int change) {
@@ -436,7 +436,7 @@ public class ChallengeModeMedio extends Activity {
             mBackgroundSound.execute(pisdestroyed,null,null);
         }
         TVpuntaje.setText(String.valueOf(puntaje));
-        TVturns.setText(String.valueOf(turnos));
+        TVturnos.setText(String.valueOf(turnos));
     }
     protected void onRestart(){
         super.onRestart();
@@ -451,7 +451,7 @@ public class ChallengeModeMedio extends Activity {
     protected void onDestroy(){
         super.onDestroy();
         mBackgroundSound.cancel(true);
-        images.clear();
+        imagenes.clear();
         pisdestroyed=true;
     }
 
@@ -534,22 +534,22 @@ public class ChallengeModeMedio extends Activity {
         savedInstanceState.putLong("segundos", segundos);
         savedInstanceState.putInt("turnos", turnos);
         savedInstanceState.putInt("puntaje", puntaje);
-        savedInstanceState.putInt("imagen0",images.get(0));
-        savedInstanceState.putInt("imagen1",images.get(1));
-        savedInstanceState.putInt("imagen2",images.get(2));
-        savedInstanceState.putInt("imagen3",images.get(3));
-        savedInstanceState.putInt("imagen4",images.get(4));
-        savedInstanceState.putInt("imagen5",images.get(5));
-        savedInstanceState.putInt("imagen6",images.get(6));
-        savedInstanceState.putInt("imagen7",images.get(7));
-        savedInstanceState.putInt("imagen8",images.get(8));
-        savedInstanceState.putInt("imagen9",images.get(9));
-        savedInstanceState.putInt("imagen10",images.get(10));
-        savedInstanceState.putInt("imagen11",images.get(11));
-        savedInstanceState.putInt("imagen12",images.get(12));
-        savedInstanceState.putInt("imagen13",images.get(13));
-        savedInstanceState.putInt("imagen14",images.get(14));
-        savedInstanceState.putInt("imagen15",images.get(15));
+        savedInstanceState.putInt("imagen0", imagenes.get(0));
+        savedInstanceState.putInt("imagen1", imagenes.get(1));
+        savedInstanceState.putInt("imagen2", imagenes.get(2));
+        savedInstanceState.putInt("imagen3", imagenes.get(3));
+        savedInstanceState.putInt("imagen4", imagenes.get(4));
+        savedInstanceState.putInt("imagen5", imagenes.get(5));
+        savedInstanceState.putInt("imagen6", imagenes.get(6));
+        savedInstanceState.putInt("imagen7", imagenes.get(7));
+        savedInstanceState.putInt("imagen8", imagenes.get(8));
+        savedInstanceState.putInt("imagen9", imagenes.get(9));
+        savedInstanceState.putInt("imagen10", imagenes.get(10));
+        savedInstanceState.putInt("imagen11", imagenes.get(11));
+        savedInstanceState.putInt("imagen12", imagenes.get(12));
+        savedInstanceState.putInt("imagen13", imagenes.get(13));
+        savedInstanceState.putInt("imagen14", imagenes.get(14));
+        savedInstanceState.putInt("imagen15", imagenes.get(15));
         super.onSaveInstanceState(savedInstanceState);
     }
 
