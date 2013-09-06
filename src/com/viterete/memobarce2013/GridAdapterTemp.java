@@ -206,6 +206,23 @@ public class GridAdapterTemp extends BaseAdapter {
                             image.setPadding(10,10,10,10);
                         }
                         break;
+                    case DisplayMetrics.DENSITY_XXHIGH:
+                        if(count==20){
+                            image.setLayoutParams(new GridView.LayoutParams(160,160));
+                            image.setScaleType(ImageView.ScaleType.CENTER_CROP);
+                            image.setPadding(8,6,8,6);
+                        }
+                        else if(count==16){
+                            image.setLayoutParams(new GridView.LayoutParams(190,190));
+                            image.setScaleType(ImageView.ScaleType.CENTER_CROP);
+                            image.setPadding(10,10,10,10);
+                        }
+                        else{
+                            image.setLayoutParams(new GridView.LayoutParams(205,205));
+                            image.setScaleType(ImageView.ScaleType.CENTER_CROP);
+                            image.setPadding(10,10,10,10);
+                        }
+                        break;
                 }
             }
 
