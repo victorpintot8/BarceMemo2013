@@ -24,10 +24,10 @@ public class PuntajesAltos extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_puntajes_altos);
 
-        //LYyo=(ViewGroup)findViewById(R.id.LYyo);
-        //LYnum=(ViewGroup)findViewById(R.id.LYnum);
-        //LYnombre=(ViewGroup)findViewById(R.id.LYnombre);
-        //LYpuntaje=(ViewGroup)findViewById(R.id.LYpuntaje);
+        LYyo=(ViewGroup)findViewById(R.id.LYyo);
+        LYnum=(ViewGroup)findViewById(R.id.LYnum);
+        LYnombre=(ViewGroup)findViewById(R.id.LYnombre);
+        LYpuntaje=(ViewGroup)findViewById(R.id.LYpuntaje);
 
         try{
 
