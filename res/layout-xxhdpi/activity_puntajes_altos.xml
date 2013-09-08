@@ -26,7 +26,9 @@
                     android:id="@+id/textView"
                     android:layout_weight="0.1"
                     android:textSize="30sp"
-                    android:textColor="#ff0000"/>
+                    android:textColor="#ff0000"
+                android:textStyle="italic"
+                android:typeface="serif" />
 
             <TextView
                     android:layout_width="wrap_content"
@@ -35,7 +37,9 @@
                     android:id="@+id/textView2"
                     android:layout_weight="0.6"
                     android:textSize="30sp"
-                    android:textColor="#ff0000"/>
+                    android:textColor="#ff0000"
+                android:typeface="serif"
+                android:textStyle="italic" />
 
             <TextView
                     android:layout_width="wrap_content"
@@ -44,7 +48,9 @@
                     android:id="@+id/textView3"
                     android:layout_weight="0.3"
                     android:textSize="30sp"
-                    android:textColor="#ff0000"/>
+                    android:textColor="#ff0000"
+                android:textStyle="italic"
+                android:typeface="serif" />
         </LinearLayout>
 
         <LinearLayout
@@ -67,7 +73,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="fill_parent"
                     android:layout_weight="0.6"
-                    android:id="@+id/LYnombre">
+                    android:id="@+id/LYnombre"
+                android:layout_marginLeft="15dp">
 
             </LinearLayout>
 
@@ -76,7 +83,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="fill_parent"
                     android:layout_weight="0.3"
-                    android:id="@+id/LYpuntaje">
+                    android:id="@+id/LYpuntaje"
+                android:layout_marginLeft="5dp">
             </LinearLayout>
 
         </LinearLayout>

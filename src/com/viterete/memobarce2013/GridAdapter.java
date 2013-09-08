@@ -12,7 +12,6 @@ import android.widget.ImageView;
 public class GridAdapter extends BaseAdapter{
 private Context context;
     private int count;
-    private boolean flag;
 
 public GridAdapter(Context c, int count1){
 	this.context=c;
@@ -84,27 +83,38 @@ public GridAdapter(Context c, int count1){
                     {
                         case DisplayMetrics.DENSITY_MEDIUM:
                             if(count==20){
-                                image.setLayoutParams(new GridView.LayoutParams(60,60));
+                                image.setLayoutParams(new GridView.LayoutParams(62,62));
                                 image.setScaleType(ImageView.ScaleType.CENTER_CROP);
-                                image.setPadding(8,6,8,6);
-                            }else{
+                                image.setPadding(4,4,4,4);
+                            }
+                            else if(count==16){
                                 image.setLayoutParams(new GridView.LayoutParams(75,75));
                                 image.setScaleType(ImageView.ScaleType.CENTER_CROP);
                                 image.setPadding(8,8,8,8);
+                            }
+                            else{
+                                image.setLayoutParams(new GridView.LayoutParams(78,78));
+                                image.setScaleType(ImageView.ScaleType.CENTER_CROP);
+                                image.setPadding(4,4,4,4);
                             }
 
                             break;
                         case DisplayMetrics.DENSITY_HIGH:
                             if(count==20){
-                                image.setLayoutParams(new GridView.LayoutParams(90,90));
+                                image.setLayoutParams(new GridView.LayoutParams(105,105));
                                 image.setScaleType(ImageView.ScaleType.CENTER_CROP);
                                 image.setPadding(8,6,8,6);
-                            }else{
+                            }
+                            else if(count==16){
                                 image.setLayoutParams(new GridView.LayoutParams(110,110));
+                                image.setScaleType(ImageView.ScaleType.CENTER_CROP);
+                                image.setPadding(8,10,8,10);
+                            }
+                            else{
+                                image.setLayoutParams(new GridView.LayoutParams(135,135));
                                 image.setScaleType(ImageView.ScaleType.CENTER_CROP);
                                 image.setPadding(8,8,8,8);
                             }
-
                             break;
                         case DisplayMetrics.DENSITY_XHIGH:
                             if(count==20){
@@ -125,17 +135,17 @@ public GridAdapter(Context c, int count1){
                             break;
                         case DisplayMetrics.DENSITY_XXHIGH:
                             if(count==20){
-                                image.setLayoutParams(new GridView.LayoutParams(160,160));
+                                image.setLayoutParams(new GridView.LayoutParams(220,220));
                                 image.setScaleType(ImageView.ScaleType.CENTER_CROP);
-                                image.setPadding(8,6,8,6);
+                                image.setPadding(10,10,10,10);
                             }
                             else if(count==16){
-                                image.setLayoutParams(new GridView.LayoutParams(190,190));
+                                image.setLayoutParams(new GridView.LayoutParams(230,230));
                                 image.setScaleType(ImageView.ScaleType.CENTER_CROP);
                                 image.setPadding(10,10,10,10);
                             }
                             else{
-                                image.setLayoutParams(new GridView.LayoutParams(205,205));
+                                image.setLayoutParams(new GridView.LayoutParams(300,300));
                                 image.setScaleType(ImageView.ScaleType.CENTER_CROP);
                                 image.setPadding(10,10,10,10);
                             }

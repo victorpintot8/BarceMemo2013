@@ -40,21 +40,39 @@ public class PuntajesAltos extends Activity {
                 num=new TextView(this);
                 nombre=new TextView(this);
                 puntaje=new TextView(this);
-                if(PuntajesAltos.this.getResources().getDisplayMetrics().densityDpi== DisplayMetrics.DENSITY_MEDIUM){
-                    num.setTextSize(25);
-                    nombre.setTextSize(25);
-                    puntaje.setTextSize(25);
+                if((this.getResources().getDisplayMetrics().widthPixels/(int)this.getResources().getDisplayMetrics().density)>=720){
+                    num.setTextSize(35);
+                    nombre.setTextSize(35);
+                    puntaje.setTextSize(35);
                 }
-                else if(PuntajesAltos.this.getResources().getDisplayMetrics().densityDpi== DisplayMetrics.DENSITY_HIGH){
-                    num.setTextSize(27);
-                    nombre.setTextSize(27);
-                    puntaje.setTextSize(27);
+                else if((this.getResources().getDisplayMetrics().widthPixels/(int)this.getResources().getDisplayMetrics().density)>=600){
+                    num.setTextSize(45);
+                    nombre.setTextSize(45);
+                    puntaje.setTextSize(45);
                 }
                 else{
-                    num.setTextSize(30);
-                    nombre.setTextSize(30);
-                    puntaje.setTextSize(30);
+                    if(PuntajesAltos.this.getResources().getDisplayMetrics().densityDpi== DisplayMetrics.DENSITY_MEDIUM){
+                        num.setTextSize(20);
+                        nombre.setTextSize(20);
+                        puntaje.setTextSize(20);
+                    }
+                    else if(PuntajesAltos.this.getResources().getDisplayMetrics().densityDpi== DisplayMetrics.DENSITY_HIGH){
+                        num.setTextSize(27);
+                        nombre.setTextSize(27);
+                        puntaje.setTextSize(27);
+                    }
+                    else if(PuntajesAltos.this.getResources().getDisplayMetrics().densityDpi== DisplayMetrics.DENSITY_XHIGH){
+                        num.setTextSize(30);
+                        nombre.setTextSize(30);
+                        puntaje.setTextSize(30);
+                    }
+                    else if(PuntajesAltos.this.getResources().getDisplayMetrics().densityDpi== DisplayMetrics.DENSITY_XXHIGH){
+                        num.setTextSize(32);
+                        nombre.setTextSize(32);
+                        puntaje.setTextSize(32);
+                    }
                 }
+
                 String temp=(String)it.next();
                 num.setText(String.valueOf(i));
                 nombre.setText((String)(it.next()));

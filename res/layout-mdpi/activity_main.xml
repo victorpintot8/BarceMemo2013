@@ -23,7 +23,8 @@
             android:layout_height="wrap_content"
             android:text="@string/desJuego"
             android:id="@+id/textView"
-            android:gravity="center"/>
+            android:gravity="center"
+        android:textSize="12sp" />
 
     <ImageView
         android:id="@+id/imageView1"

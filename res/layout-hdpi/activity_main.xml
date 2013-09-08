@@ -38,7 +38,7 @@
         android:onClick="start"
         android:text="@string/start_game" android:textStyle="bold" android:layout_marginRight="60dp"
         android:layout_marginLeft="60dp"
-        android:textSize="30sp"
+        android:textSize="25sp"
         android:textColor="#ffff00"
         android:background="#282828"
         android:layout_marginTop="8dp"
