@@ -74,7 +74,6 @@ public class ChallengeModeFacil extends Activity {
             imagenes.add(savedInstanceState.getInt("imagen10"));
             imagenes.add(savedInstanceState.getInt("imagen11"));
         } else {
-            Preferences p=new Preferences();
             SharedPreferences preferences =getSharedPreferences("MisPreferencias", Context.MODE_PRIVATE);
             isswitch=preferences.getBoolean("sCancion",false);
             cancion=preferences.getInt("nCancion",0);

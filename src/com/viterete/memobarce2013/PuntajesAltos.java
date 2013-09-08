@@ -41,14 +41,14 @@ public class PuntajesAltos extends Activity {
                 nombre=new TextView(this);
                 puntaje=new TextView(this);
                 if((this.getResources().getDisplayMetrics().widthPixels/(int)this.getResources().getDisplayMetrics().density)>=720){
-                    num.setTextSize(35);
-                    nombre.setTextSize(35);
-                    puntaje.setTextSize(35);
-                }
-                else if((this.getResources().getDisplayMetrics().widthPixels/(int)this.getResources().getDisplayMetrics().density)>=600){
                     num.setTextSize(45);
                     nombre.setTextSize(45);
                     puntaje.setTextSize(45);
+                }
+                else if((this.getResources().getDisplayMetrics().widthPixels/(int)this.getResources().getDisplayMetrics().density)>=600){
+                    num.setTextSize(50);
+                    nombre.setTextSize(50);
+                    puntaje.setTextSize(50);
                 }
                 else{
                     if(PuntajesAltos.this.getResources().getDisplayMetrics().densityDpi== DisplayMetrics.DENSITY_MEDIUM){

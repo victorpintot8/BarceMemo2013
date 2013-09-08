@@ -5,6 +5,7 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,8 +17,9 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-        View l=findViewById(R.id.RelativeLayout1);
         TextView header=(TextView)findViewById(R.id.TVmain);
+        Typeface typeFace= Typeface.createFromAsset(getAssets(), "Tequilla Sunrise.ttf");
+        header.setTypeface(typeFace);
     }
 
 

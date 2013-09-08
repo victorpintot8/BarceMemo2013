@@ -25,7 +25,7 @@
                     android:text="@string/pposicion"
                     android:id="@+id/textView"
                     android:layout_weight="0.1"
-                    android:textSize="40sp"
+                    android:textSize="50sp"
                     android:textColor="#ff0000"
                 android:typeface="serif"
                 android:textStyle="italic" />
@@ -36,7 +36,7 @@
                     android:text="@string/pnombre"
                     android:id="@+id/textView2"
                     android:layout_weight="0.6"
-                    android:textSize="40sp"
+                    android:textSize="50sp"
                     android:textColor="#ff0000"
                 android:typeface="serif"
                 android:textStyle="italic" />
@@ -47,7 +47,7 @@
                     android:text="@string/ppuntaje"
                     android:id="@+id/textView3"
                     android:layout_weight="0.3"
-                    android:textSize="40sp"
+                    android:textSize="50sp"
                     android:textColor="#ff0000"
                 android:typeface="serif"
                 android:textStyle="italic" />
@@ -74,7 +74,7 @@
                     android:layout_height="fill_parent"
                     android:layout_weight="0.6"
                     android:id="@+id/LYnombre"
-                android:layout_marginLeft="20dp">
+                android:layout_marginLeft="25dp">
 
             </LinearLayout>
 

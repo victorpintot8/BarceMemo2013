@@ -114,7 +114,6 @@ public class Preferences extends Activity {
 
     protected void onStop(){
         super.onStop();
-
     }
 
     protected void onResume(){

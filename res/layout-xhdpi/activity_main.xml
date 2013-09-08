@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="@string/title_main"
-        android:textSize="38sp" android:textStyle="bold|italic" android:textColor="#ff0000" android:focusable="false"
+        android:textSize="32sp" android:textStyle="bold|italic" android:textColor="#ff0000" android:focusable="false"
         android:textIsSelectable="false" android:typeface="serif" android:autoText="false"
             />
 
@@ -28,7 +28,7 @@
     <ImageView
         android:id="@+id/imageView1"
         android:layout_width="fill_parent"
-        android:layout_height="225dp"
+        android:layout_height="200dp"
         android:src="@drawable/barcelonalogo"
             />
 

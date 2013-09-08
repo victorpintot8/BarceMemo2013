@@ -3,7 +3,7 @@
 
 
     <!--Main Activity-->
-    <string name="title_main">Barce Memo 2013</string>
+    <string name="title_main">Barce Memo</string>
     <string name="start_game">Jugar!</string>
     <string name="preferences">Preferencias</string>
     <string name="creado_por">App creada por Víctor Pinto</string>

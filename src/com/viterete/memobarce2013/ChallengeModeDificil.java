@@ -80,7 +80,6 @@ public class ChallengeModeDificil extends Activity {
             imagenes.add(savedInstanceState.getInt("imagen18"));
             imagenes.add(savedInstanceState.getInt("imagen19"));
         } else {
-            Preferences p=new Preferences();
             SharedPreferences preferences =getSharedPreferences("MisPreferencias", Context.MODE_PRIVATE);
             isswitch=preferences.getBoolean("sCancion", false);
             cancion=preferences.getInt("nCancion",0);
