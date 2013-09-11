@@ -74,7 +74,7 @@
                     android:layout_height="fill_parent"
                     android:layout_weight="0.6"
                     android:id="@+id/LYnombre"
-                android:layout_marginLeft="30dp">
+                android:layout_marginLeft="40dp">
 
             </LinearLayout>
 
